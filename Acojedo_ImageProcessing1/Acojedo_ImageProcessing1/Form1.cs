@@ -129,12 +129,12 @@ namespace Acojedo_ImageProcessing1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            openFileDialog1.ShowDialog();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            openFileDialog2.ShowDialog();
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -145,6 +145,17 @@ namespace Acojedo_ImageProcessing1
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
+        {
+            background = new Bitmap(openFileDialog2.FileName);
+            BackgroundBox.Image = background;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
         }
 
         private void serpiaToolStripMenuItem_Click(object sender, EventArgs e)

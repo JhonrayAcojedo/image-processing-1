@@ -46,6 +46,8 @@
             this.BackgroundBox = new System.Windows.Forms.PictureBox();
             this.LoadImageBTN = new System.Windows.Forms.Button();
             this.LoadBgBTN = new System.Windows.Forms.Button();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OriginalImgBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessedImgBox)).BeginInit();
@@ -202,11 +204,27 @@
             this.LoadBgBTN.UseVisualStyleBackColor = true;
             this.LoadBgBTN.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog2";
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1262, 567);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 69);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Subtract";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Acojedo_ImageProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1604, 881);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LoadBgBTN);
             this.Controls.Add(this.LoadImageBTN);
             this.Controls.Add(this.BackgroundBox);
@@ -247,6 +265,8 @@
         private System.Windows.Forms.PictureBox BackgroundBox;
         private System.Windows.Forms.Button LoadImageBTN;
         private System.Windows.Forms.Button LoadBgBTN;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
