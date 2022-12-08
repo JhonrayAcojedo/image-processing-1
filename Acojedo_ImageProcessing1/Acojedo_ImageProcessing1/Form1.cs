@@ -11,7 +11,7 @@ namespace Acojedo_ImageProcessing1
 {
     public partial class Acojedo_ImageProcessing : Form
     {
-        Bitmap loaded, processed;
+        Bitmap loaded, processed, green, background;
         public Acojedo_ImageProcessing()
         {
             InitializeComponent();
@@ -127,6 +127,26 @@ namespace Acojedo_ImageProcessing1
             ProcessedImgBox.Image = processed;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            ProcessedImgBox.Image.Save(saveFileDialog1.FileName);
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+        }
+
         private void serpiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             processed = new Bitmap(loaded.Width, loaded.Height);
@@ -147,6 +167,11 @@ namespace Acojedo_ImageProcessing1
                 }
 
             ProcessedImgBox.Image = processed;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void OriginalImgBox_Click(object sender, EventArgs e)
