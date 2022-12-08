@@ -15,7 +15,7 @@ namespace Acojedo_ImageProcessing1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Acojedo_ImageProcessing());
         }
     }
 }

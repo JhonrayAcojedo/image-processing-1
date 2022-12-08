@@ -9,11 +9,27 @@ using System.Windows.Forms;
 
 namespace Acojedo_ImageProcessing1
 {
-    public partial class Form1 : Form
+    public partial class Acojedo_ImageProcessing : Form
     {
-        public Form1()
+        Bitmap loaded, processed;
+        public Acojedo_ImageProcessing()
         {
             InitializeComponent();
+        }
+
+        private void processImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
+
+        private void OriginalImgBox_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
         }
     }
 }
