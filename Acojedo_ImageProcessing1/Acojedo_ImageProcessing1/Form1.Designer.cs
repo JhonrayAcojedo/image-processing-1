@@ -40,9 +40,9 @@
             this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serpiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OriginalImgBox = new System.Windows.Forms.PictureBox();
-            this.ProcessedImgBox = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ProcessedImgBox = new System.Windows.Forms.PictureBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OriginalImgBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProcessedImgBox)).BeginInit();
@@ -53,7 +53,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(917, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1252, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,7 +65,7 @@
             this.processImageToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(917, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1252, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -109,18 +109,21 @@
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // grayscaleToolStripMenuItem
             // 
             this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
             this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.grayscaleToolStripMenuItem.Text = "Grayscale";
+            this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
             // 
             // colorInversionToolStripMenuItem
             // 
             this.colorInversionToolStripMenuItem.Name = "colorInversionToolStripMenuItem";
             this.colorInversionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.colorInversionToolStripMenuItem.Text = "Color Inversion";
+            this.colorInversionToolStripMenuItem.Click += new System.EventHandler(this.colorInversionToolStripMenuItem_Click);
             // 
             // histogramToolStripMenuItem
             // 
@@ -136,30 +139,31 @@
             // 
             // OriginalImgBox
             // 
-            this.OriginalImgBox.Location = new System.Drawing.Point(12, 55);
+            this.OriginalImgBox.Location = new System.Drawing.Point(63, 55);
             this.OriginalImgBox.Name = "OriginalImgBox";
-            this.OriginalImgBox.Size = new System.Drawing.Size(363, 364);
+            this.OriginalImgBox.Size = new System.Drawing.Size(431, 489);
             this.OriginalImgBox.TabIndex = 2;
             this.OriginalImgBox.TabStop = false;
             this.OriginalImgBox.Click += new System.EventHandler(this.OriginalImgBox_Click);
             // 
-            // ProcessedImgBox
-            // 
-            this.ProcessedImgBox.Location = new System.Drawing.Point(542, 55);
-            this.ProcessedImgBox.Name = "ProcessedImgBox";
-            this.ProcessedImgBox.Size = new System.Drawing.Size(363, 364);
-            this.ProcessedImgBox.TabIndex = 3;
-            this.ProcessedImgBox.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // ProcessedImgBox
+            // 
+            this.ProcessedImgBox.Location = new System.Drawing.Point(778, 55);
+            this.ProcessedImgBox.Name = "ProcessedImgBox";
+            this.ProcessedImgBox.Size = new System.Drawing.Size(431, 489);
+            this.ProcessedImgBox.TabIndex = 3;
+            this.ProcessedImgBox.TabStop = false;
             // 
             // Acojedo_ImageProcessing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 431);
+            this.ClientSize = new System.Drawing.Size(1252, 789);
             this.Controls.Add(this.ProcessedImgBox);
             this.Controls.Add(this.OriginalImgBox);
             this.Controls.Add(this.menuStrip1);
@@ -190,9 +194,9 @@
         private System.Windows.Forms.ToolStripMenuItem histogramToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serpiaToolStripMenuItem;
         private System.Windows.Forms.PictureBox OriginalImgBox;
-        private System.Windows.Forms.PictureBox ProcessedImgBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.PictureBox ProcessedImgBox;
     }
 }
 
