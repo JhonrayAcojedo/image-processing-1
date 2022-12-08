@@ -155,7 +155,26 @@ namespace Acojedo_ImageProcessing1
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            processed = new Bitmap(loaded.Width, loaded.Height);
+            Color clrGreen = Color.FromArgb(0, 255, 0);
+            int grayGreen = (clrGreen.R + clrGreen.G + clrGreen.B) / 3;
+            int threshold = 5;
 
+            for (int x = 0; x < loaded.Width; x++)
+                for (int y = 0; y < loaded.Height; y++)
+                {
+                    Color pixel = loaded.GetPixel(x, y);
+                    Color backpixel = background.GetPixel(x, y);
+                    int gray = (pixel.R + pixel.G + pixel.B) / 3;
+                    int subtractvalue = Math.Abs(gray - grayGreen);
+
+                    if (subtractvalue > threshold)
+                        processed.SetPixel(x, y, pixel);
+                    else
+                        processed.SetPixel(x, y, backpixel);
+                }
+
+            ProcessedImgBox.Image = processed;
         }
 
         private void serpiaToolStripMenuItem_Click(object sender, EventArgs e)
