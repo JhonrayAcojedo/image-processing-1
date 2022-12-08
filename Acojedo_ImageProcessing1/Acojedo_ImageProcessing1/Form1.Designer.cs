@@ -130,18 +130,21 @@
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
             this.histogramToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.histogramToolStripMenuItem.Text = "Histogram";
+            this.histogramToolStripMenuItem.Click += new System.EventHandler(this.histogramToolStripMenuItem_Click);
             // 
             // serpiaToolStripMenuItem
             // 
             this.serpiaToolStripMenuItem.Name = "serpiaToolStripMenuItem";
             this.serpiaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.serpiaToolStripMenuItem.Text = "Serpia";
+            this.serpiaToolStripMenuItem.Text = "Sepia";
+            this.serpiaToolStripMenuItem.Click += new System.EventHandler(this.serpiaToolStripMenuItem_Click);
             // 
             // OriginalImgBox
             // 
             this.OriginalImgBox.Location = new System.Drawing.Point(63, 55);
             this.OriginalImgBox.Name = "OriginalImgBox";
             this.OriginalImgBox.Size = new System.Drawing.Size(431, 489);
+            this.OriginalImgBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.OriginalImgBox.TabIndex = 2;
             this.OriginalImgBox.TabStop = false;
             this.OriginalImgBox.Click += new System.EventHandler(this.OriginalImgBox_Click);
@@ -156,6 +159,7 @@
             this.ProcessedImgBox.Location = new System.Drawing.Point(778, 55);
             this.ProcessedImgBox.Name = "ProcessedImgBox";
             this.ProcessedImgBox.Size = new System.Drawing.Size(431, 489);
+            this.ProcessedImgBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProcessedImgBox.TabIndex = 3;
             this.ProcessedImgBox.TabStop = false;
             // 
